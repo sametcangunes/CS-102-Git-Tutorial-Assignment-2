@@ -20,8 +20,18 @@ public class Main {
         }
         return x;
     }
+    
 
-    public String sumOfNumbers(int array[])
+
+
+    public static int[] RandomArray(int n){
+
+        int[] randomNumbers = new Random().ints(n, 0, 100).toArray();
+        return randomNumbers;
+    }
+
+
+    public static String sumOfNumbers(int array[])
     {
         int evenNumberedIndexes = 0;
         int oddNumberedIndexes = 0;
@@ -66,7 +76,7 @@ public class Main {
         int arraySize;
         System.out.print("enter a wanted array size");
         arraySize=input.nextInt();
-        int[] array = RandomArray(ArraySize);
+        int[] array = RandomArray(arraySize);
 
         while (true) {
 
@@ -82,16 +92,16 @@ public class Main {
 
             switch (choice) {
                 case 1:
-
+                    System.out.println(min(array));
                     break;
                 case 2:
-
+                    System.out.println(max(array));
                     break;
                 case 3:
-
+                    System.out.println( Arrays.toString(differrenceFromMean(array)) );
                     break;
                 case 4:
-
+                    System.out.println(sumOfNumbers(array));
                     break;
                 case 5:
                     System.out.println("Exiting...");
