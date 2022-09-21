@@ -46,8 +46,13 @@ public class Main {
 
         Scanner input = new Scanner(System.in);
         int choice;
+        int arraySize;
+        System.out.print("enter a wanted array size");
+        arraySize=input.nextInt();
+        int[] array = RandomArray(ArraySize);
 
         while (true) {
+
             System.out.println("Menu driven console");
             System.out.print("1.) the minimum of the array\n");
             System.out.print("2.) the maximum of the array\n");
