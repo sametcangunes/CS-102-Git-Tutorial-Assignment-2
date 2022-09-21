@@ -4,7 +4,9 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
+
 public class Main {
+    
     public static double[] differrenceFromMean(int[] array){
         double[] x =  new double[array.length];
         double mean = 0;
@@ -18,6 +20,28 @@ public class Main {
         }
         return x;
     }
+
+    public String sumOfNumbers(int array[])
+    {
+        int evenNumberedIndexes = 0;
+        int oddNumberedIndexes = 0;
+
+        for(int i = 0; i < array.length; i++)
+        {
+            if(i % 2 == 0)
+            {
+                evenNumberedIndexes = evenNumberedIndexes + array[i];
+            }
+            else
+            {
+                oddNumberedIndexes = oddNumberedIndexes + array[i];
+            }
+        }
+        return "Sum of even numbered indexes is " + evenNumberedIndexes + "\n" + 
+        "Sum of odd numbered indexes is " + oddNumberedIndexes;
+    }
+
+
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
