@@ -5,7 +5,19 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
-
+    public static double[] differrenceFromMean(int[] array){
+        double[] x =  new double[array.length];
+        double mean = 0;
+        for(int i = 0; i < array.length; i++){
+            mean+= array[i];
+        }
+        mean = mean/array.length;
+        System.out.println(mean);
+        for(int i = 0; i < array.length; i++){
+            x[i] = array[i] - mean;
+        }
+        return x;
+    }
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
